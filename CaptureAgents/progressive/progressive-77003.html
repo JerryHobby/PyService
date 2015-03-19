@@ -1,0 +1,1134 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Find an Agent
+</title><div id="ctl00_webtracking_PnlGoogleAnalytics">
+	
+
+    <script language="javascript" type="text/javascript">
+        var webPropertyId = "UA-2108837-10";
+        var gaUrl = "http://www.google-analytics.com/ga.js";
+        var gaSiteSpeedSampleRate = "10";
+        var paCategory = "Agent-Static";
+        
+        var _gaObj = _gaObj || {};
+        _gaObj.getDomainForGA = function () {
+            var url = window.location.hostname;
+            var urlparts = url.split('.');
+            var i = urlparts.length;
+            var domainName = "";
+            if (i >= 2)
+                domainName = "." + urlparts[i - 2] + "." + urlparts[i - 1];
+            else
+                if (url.toLowerCase().indexOf('localhost')) {
+                    domainName = url;
+                }
+                else {
+                    domainName = ".progressiveAgent.com";
+                }
+            return domainName;
+        };
+
+        _gaObj.GATrackEvent = function (category, action, label, value, noninteraction) {
+            noninteraction = !!noninteraction;
+            if (!category) category = paCategory;
+            if (!action) action = document.domain + window.location.pathname;
+            if (typeof value != 'number') value = undefined;
+
+            _gaq.push(['_trackEvent', category, action, label, value, noninteraction]);
+        };
+
+        _gaObj.GASetCustomVar = function (index, name, value, scope) {
+            if (typeof scope != 'number') value = 3;
+            _gaq.push(['_setCustomVar', index, name, value, scope]);
+        };
+
+        _gaObj.GATrackPageview = function (pageUrl) {
+            if (typeof pageUrl != undefined) _gaq.push(['_trackPageview', pageUrl]);
+        };
+
+        var _gaq = _gaq || [];
+        _gaq.push(
+            ['_setAccount', webPropertyId],
+            ['_setAllowHash', false],
+            ['_setAllowLinker', true],
+            ['_setDomainName', _gaObj.getDomainForGA()],
+            ['_setCampSourceKey','code'],
+            ['_setSiteSpeedSampleRate', gaSiteSpeedSampleRate],
+            ['_trackPageview']);
+ 
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = gaUrl;
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</div><link href="/styles/reset.css" rel="stylesheet" type="text/css" /><link href="/styles/header_R10.css" rel="stylesheet" type="text/css" /><link href="/styles/type_R10.css" rel="stylesheet" type="text/css" /><link href="/styles/footer_R10.css" rel="stylesheet" type="text/css" /><script src="/scripts/minified/jquery-1.3.2.min.js" type="text/javascript"></script><script src="/scripts/FAAValidation.js" type="text/javascript"></script><script src="/scripts/WindowOpen.js" type="text/javascript"></script><script src="/scripts/PgaEventTrack.js" type="text/javascript"></script>
+    <!--[if lte IE 6]>
+    <link href="/styles/ie-exceptions.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    
+    <link href="/styles/grid_level1_R10.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/controls_R10.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/SearchResultsPanel.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/AdvancedSearchPanel.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/leftfaasearch.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts/FaaMainSearch.js" type="text/javascript"></script>
+    <script src="/scripts/FAAValidation.js" type="text/javascript"></script>
+    <script src="/scripts/ToolTip.js" type="text/javascript"></script>
+    <script src="/scripts/WindowOpen.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $(".snapshotIconContainer").mouseover(function() {
+
+                var position = $(this).position();
+                var top = position.top - $(this).height() + 122;
+                $(".snapshotIconContainer").css("cursor", "hand");
+                var left = position.left + 46;
+                $(".snapshotblurb").fadeIn().css({ "position": "absolute", "top": top, "width": "165px", "height": "80px", "left": left, "z-index": "9999", "background-color": "#ffffe1", "border": "1px black solid", "padding": "7px", "font-size": "11px", "line-height": "9.047pt" });
+            }).mouseout(function() {
+                var position = $(this).position();
+                $(".snapshotblurb").css("display", "none").css("top", position.top);
+
+            });
+
+        });
+    
+    </script>
+    <style type="text/css">
+        #gridLevel1Wrapper #leftColumn #hero
+        {
+            background: url("../images/hero/Hero-FAA.jpg") no-repeat;
+            width: 692px;
+        }
+        #leftColumn 
+        {
+        	height:275px;
+        }
+        #leftColumn h1
+        {
+            left: 240px;
+        }
+        #gridLevel1Wrapper #leftColumn #hero p
+        {
+            width: 425px;
+            list-style-type: none;
+            font-size: 12px;
+            position: absolute;
+            top: 140px;
+            left: 240px;
+        }
+        .ResultsTitle img {
+        display: none;
+        }
+        
+        h4.ResultsTitle  {
+              font-size: 18px;
+              color: #ffa800;
+              font-weight: normal;
+              margin-top:10px;
+              height:18px;
+              line-height:24px;
+              padding-bottom:5px;
+              
+          
+   }
+        
+        .panel
+        {
+        	margin:0 0 0 43px;
+        	border: 1px solid #c2cfdb; 
+	        display: inline; 
+	        float: left; 
+	        clear:right;
+	        width: 700px;
+	       
+        }
+        #twoColSpan
+        {
+        	width:930px;
+        	float:left;
+        	clear:both;
+        	margin:29px 0 20px 0;
+        }
+        .InsuranceSubTypeExamples
+        {
+        	left:0;
+        	top:3px;
+        }
+        
+        .lblLanguage {
+            margin-top: 15px;
+         }
+        
+    </style>
+    <div id="gridLevel1Wrapper">
+
+	<script type="text/javascript">
+    $(function () {
+        $.PrgTrackEvents({ajaxUtilsUrl:"/ajaxutils.aspx/LogEventActivity"});
+    });
+</script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="search-results.aspx?product=Auto&amp;zipCode=77003" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTE5OTU4ODI2Ng9kFgJmD2QWAgIDD2QWBgICD2QWAgICDxYCHgRUZXh0BUQ8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+dmFyIHNlbGVjdGVkVGFiVmFsdWU9J0hvbWUnOzwvc2NyaXB0PmQCBA9kFgYCBg9kFgJmD2QWAgIBD2QWDGYPZBYCAgEPZBYCZg9kFgZmDxAPFgYeDURhdGFUZXh0RmllbGQFC0Rlc2NyaXB0aW9uHg5EYXRhVmFsdWVGaWVsZAULUHJvZHVjdFR5cGUeC18hRGF0YUJvdW5kZ2QQFQwOQXV0byBJbnN1cmFuY2UZU25hcHNob3QgLSBBdXRvIEluc3VyYW5jZRlDb21tZXJjaWFsIEF1dG8gSW5zdXJhbmNlEkJvYXQvUFdDIEluc3VyYW5jZRRNb3RvcmN5Y2xlIEluc3VyYW5jZQ1BVFYgSW5zdXJhbmNlE0RpcnQgQmlrZSBJbnN1cmFuY2UXTW9wZWQvU2Nvb3RlciBJbnN1cmFuY2UUU25vd21vYmlsZSBJbnN1cmFuY2UMUlYgSW5zdXJhbmNlE0dvbGYgQ2FydCBJbnN1cmFuY2UQU2Vnd2F5IEluc3VyYW5jZRUMBEF1dG8IU25hcHNob3QOQ29tbWVyY2lhbEF1dG8HQm9hdFBXQwpNb3RvcmN5Y2xlA0FUVghEaXJ0QmlrZQxNb3BlZFNjb290ZXIKU25vd21vYmlsZQJSVghHb2xmQ2FydAZTZWd3YXkUKwMMZ2dnZ2dnZ2dnZ2dnFgFmZAIBDw8WAh8ABQU3NzAwM2RkAgIPD2QWAh4Hb25jbGljawWAAnJldHVybiBDaGVja1ppcENvZGUoJ2N0bDAwX0xlZnRDb2x1bW5fRmluZEFnZW50X0ZBQUhlbHBlcjJfdHh0WmlwJywgJCgnI2N0bDAwX0xlZnRDb2x1bW5fRmluZEFnZW50X0ZBQUhlbHBlcjJfZGRsRkFBUHJvZHVjdCcpLnZhbCgpLCAnaHR0cCUzYSUyZiUyZnd3dy5wcm9ncmVzc2l2ZWFnZW50LmNvbSUyZmZpbmRhbmFnZW50JTJmc2VhcmNoLXJlc3VsdHMuYXNweCUzZnByb2R1Y3QlM2RBdXRvJTI2emlwQ29kZSUzZDc3MDAzJywgJ2NsaWNrRkFBJylkAgEPZBYCAgEPZBYCZg9kFgRmDxAPFgYfAQULRGVzY3JpcHRpb24fAgULUHJvZHVjdFR5cGUfA2dkEBUMDkF1dG8gSW5zdXJhbmNlGVNuYXBzaG90IC0gQXV0byBJbnN1cmFuY2UZQ29tbWVyY2lhbCBBdXRvIEluc3VyYW5jZRJCb2F0L1BXQyBJbnN1cmFuY2UUTW90b3JjeWNsZSBJbnN1cmFuY2UNQVRWIEluc3VyYW5jZRNEaXJ0IEJpa2UgSW5zdXJhbmNlF01vcGVkL1Njb290ZXIgSW5zdXJhbmNlFFNub3dtb2JpbGUgSW5zdXJhbmNlDFJWIEluc3VyYW5jZRNHb2xmIENhcnQgSW5zdXJhbmNlEFNlZ3dheSBJbnN1cmFuY2UVDARBdXRvCFNuYXBzaG90DkNvbW1lcmNpYWxBdXRvB0JvYXRQV0MKTW90b3JjeWNsZQNBVFYIRGlydEJpa2UMTW9wZWRTY29vdGVyClNub3dtb2JpbGUCUlYIR29sZkNhcnQGU2Vnd2F5FCsDDGdnZ2dnZ2dnZ2dnZ2RkAgIPD2QWAh8EBYACcmV0dXJuIENoZWNrWmlwQ29kZSgnY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyM190eHRaaXAnLCAkKCcjY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyM19kZGxGQUFQcm9kdWN0JykudmFsKCksICdodHRwJTNhJTJmJTJmd3d3LnByb2dyZXNzaXZlYWdlbnQuY29tJTJmZmluZGFuYWdlbnQlMmZzZWFyY2gtcmVzdWx0cy5hc3B4JTNmcHJvZHVjdCUzZEF1dG8lMjZ6aXBDb2RlJTNkNzcwMDMnLCAnY2xpY2tGQUEnKWQCAg9kFgICAQ9kFgJmD2QWBmYPEA8WBh8BBQtEZXNjcmlwdGlvbh8CBQtQcm9kdWN0VHlwZR8DZ2QQFQwOQXV0byBJbnN1cmFuY2UZU25hcHNob3QgLSBBdXRvIEluc3VyYW5jZRlDb21tZXJjaWFsIEF1dG8gSW5zdXJhbmNlEkJvYXQvUFdDIEluc3VyYW5jZRRNb3RvcmN5Y2xlIEluc3VyYW5jZQ1BVFYgSW5zdXJhbmNlE0RpcnQgQmlrZSBJbnN1cmFuY2UXTW9wZWQvU2Nvb3RlciBJbnN1cmFuY2UUU25vd21vYmlsZSBJbnN1cmFuY2UMUlYgSW5zdXJhbmNlE0dvbGYgQ2FydCBJbnN1cmFuY2UQU2Vnd2F5IEluc3VyYW5jZRUMBEF1dG8IU25hcHNob3QOQ29tbWVyY2lhbEF1dG8HQm9hdFBXQwpNb3RvcmN5Y2xlA0FUVghEaXJ0QmlrZQxNb3BlZFNjb290ZXIKU25vd21vYmlsZQJSVghHb2xmQ2FydAZTZWd3YXkUKwMMZ2dnZ2dnZ2dnZ2dnFgFmZAIBDw8WAh8ABQU3NzAwM2RkAgIPD2QWAh8EBYACcmV0dXJuIENoZWNrWmlwQ29kZSgnY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyNF90eHRaaXAnLCAkKCcjY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyNF9kZGxGQUFQcm9kdWN0JykudmFsKCksICdodHRwJTNhJTJmJTJmd3d3LnByb2dyZXNzaXZlYWdlbnQuY29tJTJmZmluZGFuYWdlbnQlMmZzZWFyY2gtcmVzdWx0cy5hc3B4JTNmcHJvZHVjdCUzZEF1dG8lMjZ6aXBDb2RlJTNkNzcwMDMnLCAnY2xpY2tGQUEnKWQCAw9kFgICAQ9kFgJmD2QWBmYPEA8WBh8BBQtEZXNjcmlwdGlvbh8CBQtQcm9kdWN0VHlwZR8DZ2QQFQwOQXV0byBJbnN1cmFuY2UZU25hcHNob3QgLSBBdXRvIEluc3VyYW5jZRlDb21tZXJjaWFsIEF1dG8gSW5zdXJhbmNlEkJvYXQvUFdDIEluc3VyYW5jZRRNb3RvcmN5Y2xlIEluc3VyYW5jZQ1BVFYgSW5zdXJhbmNlE0RpcnQgQmlrZSBJbnN1cmFuY2UXTW9wZWQvU2Nvb3RlciBJbnN1cmFuY2UUU25vd21vYmlsZSBJbnN1cmFuY2UMUlYgSW5zdXJhbmNlE0dvbGYgQ2FydCBJbnN1cmFuY2UQU2Vnd2F5IEluc3VyYW5jZRUMBEF1dG8IU25hcHNob3QOQ29tbWVyY2lhbEF1dG8HQm9hdFBXQwpNb3RvcmN5Y2xlA0FUVghEaXJ0QmlrZQxNb3BlZFNjb290ZXIKU25vd21vYmlsZQJSVghHb2xmQ2FydAZTZWd3YXkUKwMMZ2dnZ2dnZ2dnZ2dnFgFmZAIBDw8WAh8ABQU3NzAwM2RkAgIPD2QWAh8EBYACcmV0dXJuIENoZWNrWmlwQ29kZSgnY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyNV90eHRaaXAnLCAkKCcjY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyNV9kZGxGQUFQcm9kdWN0JykudmFsKCksICdodHRwJTNhJTJmJTJmd3d3LnByb2dyZXNzaXZlYWdlbnQuY29tJTJmZmluZGFuYWdlbnQlMmZzZWFyY2gtcmVzdWx0cy5hc3B4JTNmcHJvZHVjdCUzZEF1dG8lMjZ6aXBDb2RlJTNkNzcwMDMnLCAnY2xpY2tGQUEnKWQCBA9kFgICAQ9kFgJmD2QWBmYPEA8WBh8BBQtEZXNjcmlwdGlvbh8CBQtQcm9kdWN0VHlwZR8DZ2QQFQwOQXV0byBJbnN1cmFuY2UZU25hcHNob3QgLSBBdXRvIEluc3VyYW5jZRlDb21tZXJjaWFsIEF1dG8gSW5zdXJhbmNlEkJvYXQvUFdDIEluc3VyYW5jZRRNb3RvcmN5Y2xlIEluc3VyYW5jZQ1BVFYgSW5zdXJhbmNlE0RpcnQgQmlrZSBJbnN1cmFuY2UXTW9wZWQvU2Nvb3RlciBJbnN1cmFuY2UUU25vd21vYmlsZSBJbnN1cmFuY2UMUlYgSW5zdXJhbmNlE0dvbGYgQ2FydCBJbnN1cmFuY2UQU2Vnd2F5IEluc3VyYW5jZRUMBEF1dG8IU25hcHNob3QOQ29tbWVyY2lhbEF1dG8HQm9hdFBXQwpNb3RvcmN5Y2xlA0FUVghEaXJ0QmlrZQxNb3BlZFNjb290ZXIKU25vd21vYmlsZQJSVghHb2xmQ2FydAZTZWd3YXkUKwMMZ2dnZ2dnZ2dnZ2dnFgFmZAIBDw8WAh8ABQU3NzAwM2RkAgIPD2QWAh8EBYACcmV0dXJuIENoZWNrWmlwQ29kZSgnY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyNl90eHRaaXAnLCAkKCcjY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyNl9kZGxGQUFQcm9kdWN0JykudmFsKCksICdodHRwJTNhJTJmJTJmd3d3LnByb2dyZXNzaXZlYWdlbnQuY29tJTJmZmluZGFuYWdlbnQlMmZzZWFyY2gtcmVzdWx0cy5hc3B4JTNmcHJvZHVjdCUzZEF1dG8lMjZ6aXBDb2RlJTNkNzcwMDMnLCAnY2xpY2tGQUEnKWQCBQ9kFgICAQ9kFgJmD2QWBmYPEA8WBh8BBQtEZXNjcmlwdGlvbh8CBQtQcm9kdWN0VHlwZR8DZ2QQFQwOQXV0byBJbnN1cmFuY2UZU25hcHNob3QgLSBBdXRvIEluc3VyYW5jZRlDb21tZXJjaWFsIEF1dG8gSW5zdXJhbmNlEkJvYXQvUFdDIEluc3VyYW5jZRRNb3RvcmN5Y2xlIEluc3VyYW5jZQ1BVFYgSW5zdXJhbmNlE0RpcnQgQmlrZSBJbnN1cmFuY2UXTW9wZWQvU2Nvb3RlciBJbnN1cmFuY2UUU25vd21vYmlsZSBJbnN1cmFuY2UMUlYgSW5zdXJhbmNlE0dvbGYgQ2FydCBJbnN1cmFuY2UQU2Vnd2F5IEluc3VyYW5jZRUMBEF1dG8IU25hcHNob3QOQ29tbWVyY2lhbEF1dG8HQm9hdFBXQwpNb3RvcmN5Y2xlA0FUVghEaXJ0QmlrZQxNb3BlZFNjb290ZXIKU25vd21vYmlsZQJSVghHb2xmQ2FydAZTZWd3YXkUKwMMZ2dnZ2dnZ2dnZ2dnFgFmZAIBDw8WAh8ABQU3NzAwM2RkAgIPD2QWAh8EBYACcmV0dXJuIENoZWNrWmlwQ29kZSgnY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyOV90eHRaaXAnLCAkKCcjY3RsMDBfTGVmdENvbHVtbl9GaW5kQWdlbnRfRkFBSGVscGVyOV9kZGxGQUFQcm9kdWN0JykudmFsKCksICdodHRwJTNhJTJmJTJmd3d3LnByb2dyZXNzaXZlYWdlbnQuY29tJTJmZmluZGFuYWdlbnQlMmZzZWFyY2gtcmVzdWx0cy5hc3B4JTNmcHJvZHVjdCUzZEF1dG8lMjZ6aXBDb2RlJTNkNzcwMDMnLCAnY2xpY2tGQUEnKWQCCg9kFgICAQ8PFgIfAAULUHJvZ3Jlc3NpdmVkZAIMD2QWAmYPZBYiAgEPDxYCHwAFIEFkdmFuY2VkIEluc3VyYW5jZSBBZ2VudCBMb2NhdG9yZGQCAw8PFgIfAAUPQWR2YW5jZWQgU2VhcmNoZGQCBQ8PFgIfAAUPU3RyZWV0IEFkZHJlc3M6ZGQCCQ8PFgIfAAUFQ2l0eTpkZAINDw8WAh8ABQZTdGF0ZTpkZAIPDxBkDxY0ZgIBAgICAwIEAgUCBgIHAggCCQIKAgsCDAINAg4CDwIQAhECEgITAhQCFQIWAhcCGAIZAhoCGwIcAh0CHgIfAiACIQIiAiMCJAIlAiYCJwIoAikCKgIrAiwCLQIuAi8CMAIxAjICMxY0EAUJU2VsZWN0Li4uZWcQBQdBbGFiYW1hBQJBTGcQBQZBbGFza2EFAkFLZxAFB0FyaXpvbmEFAkFaZxAFCEFya2Fuc2FzBQJBUmcQBQpDYWxpZm9ybmlhBQJDQWcQBQhDb2xvcmFkbwUCQ09nEAULQ29ubmVjdGljdXQFAkNUZxAFCERlbGF3YXJlBQJERWcQBRREaXN0cmljdCBvZiBDb2x1bWJpYQUCRENnEAUHRmxvcmlkYQUCRkxnEAUHR2VvcmdpYQUCR0FnEAUGSGF3YWlpBQJISWcQBQVJZGFobwUCSURnEAUISWxsaW5vaXMFAklMZxAFB0luZGlhbmEFAklOZxAFBElvd2EFAklBZxAFBkthbnNhcwUCS1NnEAUIS2VudHVja3kFAktZZxAFCUxvdWlzaWFuYQUCTEFnEAUFTWFpbmUFAk1FZxAFCE1hcnlsYW5kBQJNRGcQBQ1NYXNzYWNodXNldHRzBQJNQWcQBQhNaWNoaWdhbgUCTUlnEAUJTWlubmVzb3RhBQJNTmcQBQtNaXNzaXNzaXBwaQUCTVNnEAUITWlzc291cmkFAk1PZxAFB01vbnRhbmEFAk1UZxAFCE5lYnJhc2thBQJORWcQBQZOZXZhZGEFAk5WZxAFDU5ldyBIYW1wc2hpcmUFAk5IZxAFCk5ldyBKZXJzZXkFAk5KZxAFCk5ldyBNZXhpY28FAk5NZxAFCE5ldyBZb3JrBQJOWWcQBQ5Ob3J0aCBDYXJvbGluYQUCTkNnEAUMTm9ydGggRGFrb3RhBQJORGcQBQRPaGlvBQJPSGcQBQhPa2xhaG9tYQUCT0tnEAUGT3JlZ29uBQJPUmcQBQxQZW5uc3lsdmFuaWEFAlBBZxAFDFJob2RlIElzbGFuZAUCUklnEAUOU291dGggQ2Fyb2xpbmEFAlNDZxAFDFNvdXRoIERha290YQUCU0RnEAUJVGVubmVzc2VlBQJUTmcQBQVUZXhhcwUCVFhnEAUEVXRhaAUCVVRnEAUHVmVybW9udAUCVlRnEAUIVmlyZ2luaWEFAlZBZxAFCldhc2hpbmd0b24FAldBZxAFDVdlc3QgVmlyZ2luaWEFAldWZxAFCVdpc2NvbnNpbgUCV0lnEAUHV3lvbWluZwUCV1lnZGQCEQ8PFgIfAAUJWklQIENvZGU6ZGQCFQ8PFgIfAAUOU2VhcmNoIFdpdGhpbjpkZAIXDxBkDxYJZgIBAgICAwIEAgUCBgIHAggWCRAFCVNlbGVjdC4uLmVnEAUHNSBtaWxlcwUBNWcQBQgxMCBtaWxlcwUCMTBnEAUIMTUgbWlsZXMFAjE1ZxAFCDI1IG1pbGVzBQIyNWcQBQg1MCBtaWxlcwUCNTBnEAUINzUgbWlsZXMFAjc1ZxAFCTEwMCBtaWxlcwUDMTAwZxAFCTE1MCBtaWxlcwUDMTUwZ2RkAhkPDxYCHwAFDEFnZW5jeSBOYW1lOmRkAh0PDxYCHwAFDEluc3VyZSBZb3VyOmRkAh8PEA8WBh8BBQtEZXNjcmlwdGlvbh8CBQtQcm9kdWN0VHlwZR8DZ2QQFQwOQXV0byBJbnN1cmFuY2UZU25hcHNob3QgLSBBdXRvIEluc3VyYW5jZRlDb21tZXJjaWFsIEF1dG8gSW5zdXJhbmNlEkJvYXQvUFdDIEluc3VyYW5jZRRNb3RvcmN5Y2xlIEluc3VyYW5jZQ1BVFYgSW5zdXJhbmNlE0RpcnQgQmlrZSBJbnN1cmFuY2UXTW9wZWQvU2Nvb3RlciBJbnN1cmFuY2UUU25vd21vYmlsZSBJbnN1cmFuY2UMUlYgSW5zdXJhbmNlE0dvbGYgQ2FydCBJbnN1cmFuY2UQU2Vnd2F5IEluc3VyYW5jZRUMBEF1dG8IU25hcHNob3QOQ29tbWVyY2lhbEF1dG8HQm9hdFBXQwpNb3RvcmN5Y2xlA0FUVghEaXJ0QmlrZQxNb3BlZFNjb290ZXIKU25vd21vYmlsZQJSVghHb2xmQ2FydAZTZWd3YXkUKwMMZ2dnZ2dnZ2dnZ2dnZGQCIQ8QDxYGHwEFC0Rlc2NyaXB0aW9uHwIFC1Byb2R1Y3RUeXBlHwNnFgIeBXN0eWxlBQ1kaXNwbGF5Om5vbmU7EBUECVNlbGVjdC4uLg1CdXNpbmVzcyBBdXRvD1RydWNrIEluc3VyYW5jZQlUb3cgVHJ1Y2sVBAAMQnVzaW5lc3NBdXRvBVRydWNrCFRvd1RydWNrFCsDBGdnZ2dkZAIjDxYGHgRocmVmBRNqYXZhc2NyaXB0OnZvaWQoMCk7HwQFWXJldHVybiBTZXRWaWV3RXhMaW5rKCdjb21tZXJjaWFsLWF1dG8tdHlwZXMuYXNweD9sYW5nPUUnLCAnY3RsMDBfTGVmdENvbHVtbl9GQUFBZHZhbmNlMScpHwUFDWRpc3BsYXk6bm9uZTtkAiUPDxYCHwAFCUxhbmd1YWdlOmRkAicPEA8WBh8CBQNLZXkfAQUFVmFsdWUfA2dkEBUhCVNlbGVjdC4uLgZBcmFiaWMIQXJtZW5pYW4HQ2hpbmVzZQdFbmdsaXNoB0VyaXRyZW4JRXRoaW9waWFuBkZyZW5jaAZHZXJtYW4FR3JlZWsIR3VqYXJhdGkGSGVicmV3BUhpbmRpB0l0YWxpYW4ISmFwYW5lc2UGS29yZWFuBExhb3MFT3RoZXIHUGVyc2lhbgZQb2xpc2gKUG9ydHVndWVzZQhSb21hbmlhbgdSdXNzaWFuDVNpZ24gTGFuZ3VhZ2UIU29tYWxpYW4HU3BhbmlzaAdTd2VkaXNoFFRhZ2Fsb2cgKFBoaWxpcHBpbmUpCVRhaXdhbmVzZQRUaGFpB1R1cmtpc2gEVXJkdQpWaWV0bmFtZXNlFSEAAVEBMQFDAUUBNgE0AUgBRwFBAVoBTQFVAUkBSgFLATMBTwFMAU4BUAFSAUIBRAE1AVMBVwFGAVQBMgFYAVkBVhQrAyFnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAIpDw9kFgIeB29uQ2xpY2sFoQJyZXR1cm4gY2hlY2tBbGxGQUEyKCdjdGwwMF9MZWZ0Q29sdW1uX0ZBQUFkdmFuY2UxX3R4dFppcENvZGUnLCdjdGwwMF9MZWZ0Q29sdW1uX0ZBQUFkdmFuY2UxX3R4dENpdHknLCdjdGwwMF9MZWZ0Q29sdW1uX0ZBQUFkdmFuY2UxX2RkbFN0YXRlTGlzdCcsJ2N0bDAwX0xlZnRDb2x1bW5fRkFBQWR2YW5jZTFfdHh0QWdlbmN5TmFtZScsJ2N0bDAwX0xlZnRDb2x1bW5fRkFBQWR2YW5jZTFfZGRsSW5zdXJhbmNlVHlwZScsJ2N0bDAwX0xlZnRDb2x1bW5fRkFBQWR2YW5jZTFfZGRsSW5zdXJhbmNlU3ViVHlwZScpZAIGD2QWAgIBD2QWAmYPZBYCZg9kFgICAw9kFgJmD2QWCAIFDw8WAh4JTWF4TGVuZ3RoAgVkZAIHDxAPFgYfAQULRGVzY3JpcHRpb24fAgULUHJvZHVjdFR5cGUfA2dkEBULDkF1dG8gSW5zdXJhbmNlGUNvbW1lcmNpYWwgQXV0byBJbnN1cmFuY2USQm9hdC9QV0MgSW5zdXJhbmNlFE1vdG9yY3ljbGUgSW5zdXJhbmNlDUFUViBJbnN1cmFuY2UTRGlydCBCaWtlIEluc3VyYW5jZRdNb3BlZC9TY29vdGVyIEluc3VyYW5jZRRTbm93bW9iaWxlIEluc3VyYW5jZQxSViBJbnN1cmFuY2UTR29sZiBDYXJ0IEluc3VyYW5jZRBTZWd3YXkgSW5zdXJhbmNlFQsEQXV0bw5Db21tZXJjaWFsQXV0bwdCb2F0UFdDCk1vdG9yY3ljbGUDQVRWCERpcnRCaWtlDE1vcGVkU2Nvb3RlcgpTbm93bW9iaWxlAlJWCEdvbGZDYXJ0BlNlZ3dheRQrAwtnZ2dnZ2dnZ2dnZ2RkAgkPZBYCAgEPEGRkFgFmZAILDw9kFgIfBAXAAnJldHVybiBDaGVja1FTWmlwQ29kZSgnY3RsMDBfUmlnaHRDb2x1bW5fU2VhcmNoUmVzdWx0c1F1b3RlU3RhcnRfUXVvdGVTdGFydEhlbHBlcjRfWmlwQ29kZScsICQoJyNjdGwwMF9SaWdodENvbHVtbl9TZWFyY2hSZXN1bHRzUXVvdGVTdGFydF9RdW90ZVN0YXJ0SGVscGVyNF9Qcm9kdWN0RERMJykudmFsKCksICdodHRwJiM1ODsmIzQ3OyYjNDc7d3d3LnByb2dyZXNzaXZlYWdlbnQuY29tJiM0NztmaW5kYW5hZ2VudCYjNDc7c2VhcmNoLXJlc3VsdHMuYXNweCYjNjM7cHJvZHVjdCYjNjE7QXV0byYjMzg7emlwQ29kZSYjNjE7NzcwMDMnLCAnY2xpY2tRUycsJycpZBgGBRljdGwwMCRmb290ZXIkbXZkaXNjbGFpbWVyDw9kZmQFIGN0bDAwJExlZnRDb2x1bW4kRmluZEFnZW50JG12RkFBDw9kAgFkBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwUvY3RsMDAkTGVmdENvbHVtbiRGaW5kQWdlbnQkRkFBSGVscGVyMyRpbWdidG5GQUEFM2N0bDAwJExlZnRDb2x1bW4kRkFBQWR2YW5jZTEkRkFBQWR2YW5jZVNlYXJjaEJ1dHRvbgVMY3RsMDAkUmlnaHRDb2x1bW4kU2VhcmNoUmVzdWx0c1F1b3RlU3RhcnQkUXVvdGVTdGFydEhlbHBlcjQkQmVnaW5RdW90ZUJ1dHRvbgUVY3RsMDAkZm9vdGVyJG12Zm9vdGVyDw9kZmQFNGN0bDAwJFJpZ2h0Q29sdW1uJFNlYXJjaFJlc3VsdHNRdW90ZVN0YXJ0JG12UVNIZWFkZXIPD2RmZAUVY3RsMDAkaGVhZGVyJG12SGVhZGVyDw9kZmQ/MLa0sjsHd7ZFWtQaowqCUZyDHg==" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWnQEC4o2y9QcC/f2jigQCwJ67igMC7sa43gMC3reb+wMC28C9kAICo8qyzgUCo7/9qgICrMzdhQwCvLHD+QYCtpTh+AECjKeykQgCk6quuwYCoJTtigwCm7jiuQwCsI7BOALwuMKwCQLPyqr8BwKQpZCMCwKQpZSMCwKQpaiNCwKQpciMCwKSpYyMCwKSpYSMCwKSpfCMCwKTpbyMCwKTpbSMCwKVpZCMCwKWpYyMCwKnpeyMCwKopbCMCwKopZCMCwKopZiMCwKopYyMCwKqpfSMCwKqpayNCwKrpYyMCwKspbyMCwKspbCMCwKspYyMCwKspeyMCwKspZiMCwKspfSMCwKspYSMCwKspfCMCwKtpbyMCwKtpfiMCwKtpeCMCwKtpeiMCwKtpZyMCwKtpayNCwKtpbSMCwKtpbCMCwKupeCMCwKupZSMCwKupciMCwK/pYyMCwKhpeyMCwKipbSMCwKipbCMCwKjpZiMCwKjpaCNCwKkpfCMCwKlpfCMCwKlpYyMCwKmpYyMCwKmpfiMCwKmpeyMCwKmpayNCwK/wa7fDAKw9ciHBgK7muLpCgK/mqLqCgK/mp7qCgK+mp7qCgK7mqLqCgK5mp7qCgKZ28W9DQKZ27G+DQLt++OMCgLere71AwLjzvb1BALNlvWhBAL959aEBAL4kPDvBQKAmv+xAgKA77DVBQKPnJD6CwKf4Y6GAQKVxKyHBgKv9//uDwKw+uPEAQLw+5SAAgLskqXuCgKMkNCADgKk1dzkBgKPutrmAQLg1fCIDQKA1fCIDQLS1fCIDQLU1fCIDQKF1fCIDQKD1fCIDQLn1fCIDQLW1fCIDQLQ1fCIDQL51fCIDQLs1fCIDQLk1fCIDQLo1fCIDQLp1fCIDQLq1fCIDQKC1fCIDQLu1fCIDQLr1fCIDQLt1fCIDQL/1fCIDQLh1fCIDQLR1fCIDQLT1fCIDQKE1fCIDQLi1fCIDQLm1fCIDQLV1fCIDQLj1fCIDQKB1fCIDQL31fCIDQL41fCIDQLl1fCIDQKnlaOVAgL+/dahCALDns6hDwLtxs31DwLdt+7QDwLYwMi7DgKgysflCQKgv4iBDgKvzKguAr+xttIKArWUlNMNAo+nx7oEApCq25AKAviUubMCAsyD6+sPAu7zmrUEAv791qEIAu3GzfUPAt237tAPAtjAyLsOAqDKx+UJAqC/iIEOAq/MqC4Cv7G20goCtZSU0w0Cj6fHugQCkKrbkAoCxITU5Q+S4VtLMcViqp+d1voy0IYq/ZijhA==" /><IMG SRC='//siteserver.progressiveagent.com/session/checkid/' width='1' height='1' alt='' style='visibility:hidden'>
+    
+    <div>
+        <script src="/scripts/minified/header-min.js" type="text/javascript"></script>
+    
+<script type="text/javascript">var selectedTabValue='Home';</script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        var zIndexNumber = 1000; $('div').each(function() { $(this).css('zIndex', zIndexNumber); zIndexNumber -= 10; }); $('ul.utilityNav').superfish({ delay: 400, animation: { opacity: 'show', height: 'show' }, speed: 'fast', autoArrows: false, dropShadows: true, disableHI: false }).find('ul').bgIframe({ opacity: false }); $("ul.globalNav").superfish({ delay: 400, animation: { opacity: 'show', height: 'show' }, speed: 'fast', autoArrows: false, dropShadows: true, disableHI: false }).find('ul').bgIframe({ opacity: false }); var winWidth = $(window).width(); if (winWidth < 800) { var widthDiff = parseInt($(document).width()) - parseInt(winWidth); window.scrollBy(widthDiff, 0); }
+                        if ((selectedTabValue != 'undefined') || (selectedTabValue != '')) {
+                            var globalNavID = ''; switch (selectedTabValue.toLowerCase()) { case "getaquote": globalNavID = "getQuote"; break; case "faadvancedsearch": globalNavID = "findAnAgent"; break; case "manageyourpolicy": globalNavID = "manageYourPolicy"; break; case "claims": globalNavID = "claimsCenter"; break; case "articles": globalNavID = "articles"; break; case "contactlanding": globalNavID = "AboutUs"; break; case "aboutprogressiveagent": globalNavID = "ContactUs"; break; }
+                            if (globalNavID != '') { $('#' + globalNavID).css("background-position", "0 -68px"); }}
+                        $('.globalNavItem').mouseover(function() { var id = $(this).attr('id'); $("#" + id).css("background-position", "0 -34px"); }); $('.globalNavItem').mouseout(function() { var id = $(this).attr('id'); if (id === globalNavID) { $("#" + id).css("background-position", "0 -68px"); } else { $("#" + id).css("background-position", "0 0px"); } });});  </script>
+  
+    <div id="header">
+        
+
+                
+
+              
+                <ul class="utilityNav">
+                    <li id="AboutUs">
+                        <a id="ctl00_header_UtilityAboutProgressiveAgent" hidefocus="true" href="http://www.progressiveagent.com/about/about.aspx">About Us</a>
+                        <ul class="aboutFlyout">
+                            <li>
+                                <div class="utilityFlyoutBorder">
+                                     <a id="ctl00_header_UtilityOurStory" hidefocus="true" href="http://www.progressiveagent.com/about/our-story.aspx">Our Story</a> <a id="ctl00_header_UtilityProgressiveAdvantage" hidefocus="true" href="http://www.progressiveagent.com/about/progressive-advantage.aspx">The Progressive Advantage</a> <a id="ctl00_header_UtilityBecomeAnAgent" hidefocus="true" href="https://www.foragentsonly.com/aqn/default.aspx">Becoming
+                                        an Agent</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="ContactUs"  >
+                        <a id="ctl00_header_UtilityContact" hidefocus="true" rel="nofollow" href="http://www.progressiveagent.com/contact/contact.aspx?t=1">Contact</a>
+                        <ul class="contactFlyout">
+                            <li>
+                                <div class="utilityFlyoutBorder">
+                                    <h4 class="flyoutLabel">
+                                        Keep in Touch!</h4>
+                                    <p class="flyoutP">
+                                        Comments or questions? We&#039;d like to hear from you.</p>
+                                    <a id="ctl00_header_UtilityContactEmail" hidefocus="true" href="http://www.progressiveagent.com/contact/contact-email.aspx">E-mail</a> <a id="ctl00_header_UtilityContactLanding" hidefocus="true" href="http://www.progressiveagent.com/contact/contact.aspx?t=1">Call</a> <a id="ctl00_header_UtilityFAAdvancedSearch" hidefocus="true" href="http://www.progressiveagent.com/findanagent/advanced-search.aspx">Find an Agent</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="ctl00_header_UtilitySpanishHome" hidefocus="true" href="http://www.progressiveagent.com/espanol-home.aspx">Espa&ntilde;ol</a>
+                        <ul class="spanishFlyout">
+                            <li>
+                                <div class="utilityFlyoutBorder">
+                                    <h4 class="flyoutLabel">
+                                        &iquest;Habla espa&ntilde;ol?</h4>
+                                    <p class="flyoutP">
+                                        Este es el camino que puede seguir si busca bajas tarifas y el consejo experto de
+                                        un agente independiente.</p>
+                                   <a id="ctl00_header_UtilitySpanishHomeButton" class="flyoutButton" hidefocus="true" href="http://www.progressiveagent.com/espanol-home.aspx">
+                                        <img src="/images/header/btn-vamos.gif" border="0" width="143" height="30" alt="Vamos" /></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a id="ctl00_header_UtilityManageYourPolicy" class="Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE">Log In</a>
+                        
+                    </li>
+                </ul>
+                <div class="tagline"></div>
+                <a id="ctl00_header_Logo" class="logo" hidefocus="true" href="http://www.progressiveagent.com/" style="display:inline-block;"><img alt="Progressive Insurance" src="Http://www.progressiveagent.com/images/header/logo.png" width="203" height="25"></a>
+                <ul class="globalNav">
+                    <li id="getQuote" class="globalNavItem">
+                        <a id="ctl00_header_PALink1" class="hiddenText" hidefocus="true" href="http://www.progressiveagent.com/quote/insurance-quote.aspx">Get a quote</a>
+                        <ul class="getQuoteFlyout">
+                            <li>
+                                <div class="globalFlyoutBorder">
+                                    <div class="col1">
+                                        <a id="ctl00_header_HeaderGetQuoteAutoImage" class="flyoutImage" hidefocus="true" href="http://www.progressiveagent.com/auto/auto-insurance.aspx">
+                                            <img src="/images/header/flyout-car.jpg" alt="Auto Insurance" width="80" height="76" /></a> <a id="ctl00_header_HeaderGetQuoteAutoLabel" hidefocus="true" class="flyoutLabel" href="http://www.progressiveagent.com/auto/auto-insurance.aspx">Auto Insurance</a>
+                                    </div>
+                                    <div class="col2">
+                                        <a id="ctl00_header_HeaderGetQuoteHomeImage" class="flyoutImage" hidefocus="true" href="http://www.progressiveagent.com/homeowners/home-insurance.aspx">
+                                            <img src="/images/header/flyout-home.jpg" alt="Home Insurance" width="71" height="76" /></a> <a id="ctl00_header_HeaderGetQuoteHomeLabel" hidefocus="true" class="flyoutLabel" href="http://www.progressiveagent.com/homeowners/home-insurance.aspx">Home Insurance</a>
+                                    </div>
+                                    <div class="col3">
+                                        <a id="ctl00_header_HeaderGetQuoteMotorcycleImage" class="flyoutImage" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/motorcycle-insurance.aspx">
+                                            <img src="/images/header/flyout-bike.jpg" alt="Motorcycle Insurance" width="64" height="76" /></a> <a id="ctl00_header_HeaderGetQuoteMotorcycleLabel" hidefocus="true" class="flyoutLabel" href="http://www.progressiveagent.com/motorcycle/motorcycle-insurance.aspx">Bike Insurance</a>
+							 <p class="getQuoteText">
+                                        Get an online insurance quote for your car, home, motorcycle, boat, RV and more,
+                                        and finish with an agent. The convenience of an easy, online quote, and the expertise
+                                        of a local, independent agent... <em>now that's Progressive!</em>
+                                    </p>
+                                    </div>
+                                   
+                                    <div class="col4">
+                                        <a id="ctl00_header_HeaderGetQuoteProductsWeInsure" hidefocus="true" class="flyoutLabel" href="http://www.progressiveagent.com/insurance-choices.aspx">All Insurance Choices</a> <a id="ctl00_header_HeaderGetQuoteAuto" hidefocus="true" href="http://www.progressiveagent.com/auto/auto-insurance.aspx">Auto Insurance</a>
+                                        <a id="ctl00_header_HeaderGetQuoteMotorcycle" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/motorcycle-insurance.aspx">Motorcycle Insurance</a> <a id="ctl00_header_HeaderGetQuoteATV" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/atv-insurance.aspx">ATV Insurance</a> <a id="ctl00_header_HeaderGetQuoteSnowmobile" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/snowmobile-insurance.aspx">Snowmobile Insurance</a> <a id="ctl00_header_HeaderGetQuoteBoat" hidefocus="true" href="http://www.progressiveagent.com/watercraft/boat-insurance.aspx">Boat Insurance</a> <a id="ctl00_header_HeaderGetQuotePWC" hidefocus="true" href="http://www.progressiveagent.com/watercraft/pwc-insurance.aspx">PWC Insurance</a> <a id="ctl00_header_HeaderGetQuoteRV" hidefocus="true" href="http://www.progressiveagent.com/rv/rv-insurance.aspx">RV Insurance</a> <a id="ctl00_header_HeaderGetQuoteSegway" hidefocus="true" href="http://www.progressiveagent.com/segway/segway-insurance.aspx">Segway Insurance</a> <a id="ctl00_header_HeaderGetQuoteCommercialAuto" hidefocus="true" href="http://www.progressiveagent.com/commercialauto/commercial-auto-insurance.aspx">Commercial Auto Insurance</a>
+                                        <a id="ctl00_header_HeaderGetQuoteHome" hidefocus="true" href="http://www.progressiveagent.com/homeowners/home-insurance.aspx">Home Insurance</a> <a id="ctl00_header_HeaderGetQuoteUmbrella" hidefocus="true" href="http://www.progressiveagent.com/umbrella/umbrella-insurance.aspx">Personal Umbrella Insurance</a> <a id="ctl00_header_HeaderGetQuotePet" hidefocus="true" href="http://www.progressiveagent.com/pet-injury-coverage.aspx">Pet Injury Coverage</a>
+                                    </div>
+                                     <div style="clear: both"></div>
+                                    <div class="row1">
+                                        <a id="ctl00_header_HeaderGetQuoteRetrieveInside" hidefocus="true" href="http://www.progressiveagent.com/quote/retrieve-quote-inside.aspx">Retrieve a Previous Quote</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="findAnAgent" class="globalNavItem">
+                        <a id="ctl00_header_PALink2" class="hiddenText" hidefocus="true" href="http://www.progressiveagent.com/findanagent/advanced-search.aspx">Find An Agent</a>
+                        <ul class="findAnAgentFlyout">
+                            <li>
+                                <div class="globalFlyoutBorder">
+                                    <div class="col1">
+                                        <a id="ctl00_header_FAAdvancedSearch" hidefocus="true" href="http://www.progressiveagent.com/findanagent/advanced-search.aspx">Advanced Agent Search</a> <a id="ctl00_header_FAAAgentValue" hidefocus="true" href="http://www.progressiveagent.com/findanagent/agent-value.aspx">Agent Value</a> <a id="ctl00_header_FAAAboutAgents" hidefocus="true" href="http://www.progressiveagent.com/findanagent/about-agents.aspx">About Independent Agents</a> <a id="ctl00_header_FAATopChoice" hidefocus="true" href="http://www.progressiveagent.com/findanagent/top-choice.aspx" style="line-height: 14px;">Why Independent Agents Choose Progressive</a>
+                                    </div>
+<div class="col2"><img src="/images/header/divider.gif" width="1" height="113" alt=""/></div>
+                                  
+<div class="col3">
+	<h4 class="flyoutLabel">Why Shop with an Agent?</h4>
+	<p style="margin-top: 10px;">
+		Independent insurance agents combine personal service and professional advice with Progressive's low rates. And there's one near you!
+	</p>
+</div>
+<div style="clear: both"></div>
+ </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="manageYourPolicy" class="globalNavItem">
+                        <a id="ctl00_header_ManageYourPolicy" class="hiddenText" hidefocus="true" href="http://www.progressiveagent.com/manage-your-policy.aspx">Manage Your Policy</a>
+                        <ul class="manageYourPolicyFlyout">
+				<li>
+					<div class="globalFlyoutBorder">
+						<div class="col1">
+							<a id="ctl00_header_MYP247" class="flyoutImage Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE"><img src="/images/header/flyout-247.jpg" alt="24/7 Access" width="115" height="49" /></a>
+							<a id="ctl00_header_MYPLogIn" class="flyoutLabel Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE">Log in to:</a>
+							<a id="ctl00_header_MYPExpressPay" hidefocus="true" href="https://onlineservice3.progressive.com/selfservice.web/SelfService.aspx?Page=Non-LoggedIn.VerifyPolicy.ProvidePolicyInformation&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;EZDestination=EZPAY">Pay Your Bill</a>
+							<a id="ctl00_header_MYPViewPolicy" class="Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE">View/Update Your Policy</a>						</div>
+						<div class="col2"><img src="/images/header/divider.gif" width="1" height="113" alt=""/></div>
+						<div class="col3">
+							<h4 class="flyoutLabel">By logging in, you can also:</h4>
+							<a id="ctl00_header_HeaderMYPReportTrackClaim" hidefocus="true" href="http://www.progressiveagent.com/claims/claims.aspx">Report or Track a Claim</a>
+							<a id="ctl00_header_HeaderMYPPrintIDCards" hidefocus="true" href="http://www.progressiveagent.com/manage-your-policy.aspx">Print ID Cards</a>
+							<a id="ctl00_header_HeaderMYPPrintPolicyDocuments" hidefocus="true" href="http://www.progressiveagent.com/manage-your-policy.aspx">Print Policy Documents</a>
+							<a id="ctl00_header_HeaderMYPAddDriversVehicles" hidefocus="true" href="http://www.progressiveagent.com/manage-your-policy.aspx">Add Drivers and Vehicles</a>
+							<a id="ctl00_header_HeaderMYPViewAgentInfo" hidefocus="true" href="http://www.progressiveagent.com/manage-your-policy.aspx">View Your Agent's Info</a>						</div>
+							<div style="clear: both"></div>
+							<div class="row1">
+							<h4 class="flyoutLabel">New to Progressive?</h4> <a id="ctl00_header_PALink18" hidefocus="true" href="https://onlineservice3.progressive.com/selfservice.web/SelfService.aspx?Page=Login.ProvideIdentity&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;TitleID=Register">Register Your Policy</a>							</div>
+						
+					</div>
+				</li>
+			</ul>
+
+                     </li>
+                  
+                        <li id="claimsCenter" class="globalNavItem">
+                            <a id="ctl00_header_Claims" class="hiddenText" hidefocus="true" href="http://www.progressiveagent.com/claims/claims.aspx">Claims Center</a>
+                            <ul class="claimsCenterFlyout">
+                                <li>
+                                    <div class="globalFlyoutBorder">
+                                        <div class="col1">
+                                            <a id="ctl00_header_HeaderClaimsImage" class="flyoutImage Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;FD=AuthKeyClaimService">
+                                                <img src="/images/header/flyout-computer.jpg" alt="24/7 Access" width="71" height="59" />
+                                            </a> 
+                                            <a id="ctl00_header_HeaderClaimsLabel" class="flyoutLabel Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;FD=AuthKeyClaimService">Log in to:</a> <a id="ctl00_header_ClaimsReportClaim" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;FD=AuthKeyClaimService">Report a Claim</a> <a id="ctl00_header_ClaimsTrackClaim" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;FD=AuthKeyClaimService">Track a Claim</a>
+                                        </div>
+<div class="col2"><img src="/images/header/divider.gif" width="1" height="113" alt="" /></div>                                        
+<div class="col3">
+                                            <h4 class="flyoutLabel">
+                                                All About Claims</h4>
+                                            <a id="ctl00_header_ClaimsProcess" hidefocus="true" href="http://www.progressiveagent.com/claims/claims-process.aspx">Claims Process</a> <a id="ctl00_header_ClaimsConcierge" hidefocus="true" href="http://www.progressiveagent.com/claims/concierge-claims.aspx">Concierge Experience</a> <a id="ctl00_header_ClaimsCatastrophe" hidefocus="true" href="http://www.progressiveagent.com/claims/catastrophe-claims.aspx">Catastrophe
+                                                Claims</a> <a id="ctl00_header_WindshieldClaims" hidefocus="true" href="http://www.progressiveagent.com/claims/windshield-claims.aspx">Windshield &amp; Glass Claims</a> <a id="ctl00_header_RepairEstimates" hidefocus="true" href="http://www.progressiveagent.com/claims/repair-estimates.aspx">Repair Estimates</a>
+                                            <a id="ctl00_header_RoadsideAssistance" hidefocus="true" href="http://www.progressiveagent.com/claims/roadside-assistance.aspx">Roadside Assistance</a>
+                                        </div>
+                                        <div style="clear: both">
+                                        </div>
+					<div class="row1">
+                                        <h4 class="flyoutLabel">
+                                            Not a Progressive customer?</h4>
+                                        <a id="ctl00_header_NotAPolicyholderClaim" hidefocus="true" class="Prg_TrackAs-Login-EZ_Hub-394" href="http://onlineservice3.progressiveagent.com/SelfService.Web/ClaimPartyEntry.aspx?exp=4">Access Your Claim</a>
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                          </li> 
+                            <li id="articles" class="globalNavItem">
+                                <a id="ctl00_header_HeaderArticles" class="hiddenText" hidefocus="true" href="http://www.progressiveagent.com/articles/summary.aspx">Articles</a>
+                                <ul class="articlesFlyout">
+                                    <li>
+                                        <div class="globalFlyoutBorder">
+                                            <div class="col1">
+                                                <a id="ctl00_header_HeaderArticlesChannelGuide" class="flyoutLabel" hidefocus="true" href="http://www.progressiveagent.com/articles/channel-guide.aspx">Channel Guide</a> <a href="/articles/how-to-stay-on-the-road.aspx">Insurance Basics</a>
+                                                <a href="/articles/five-questions-to-save-on-car-insurance.aspx">About Independent Agents</a> <a href="/articles/debunking-commercial-auto-insurance-myths.aspx">Commercial Auto Insurance</a>
+                                                <a href="/articles/motorcyclists-be-prepared.aspx">Special Lines Insurance</a>
+                                            </div>
+<div class="col2"><img src="/images/header/divider.gif" width="1" height="113" alt="" /></div>
+						<div class="col3"><h4 class="flyoutLabel">About Insurance Articles</h4>
+						<p>You can subscribe to have articles delivered to your preferred home page via RSS, saving you the time it takes to visit multiple sites. It's free and easy, <a id="ctl00_header_HeaderArticlesChannelGuide2" hidefocus="true" href="http://www.progressiveagent.com/articles/channel-guide.aspx">give RSS articles a try</a>!</p></div>
+
+                                            <div style="clear: both">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                              </li>
+                           </ul>
+                           
+            
+    </div>
+
+    </div>
+    <div>
+        
+    <div id="leftColumn">
+        <!--begin main banner-->
+        <div class="bannerHeader">
+            <div id="hero"><h1 id="ctl00_LeftColumn_bannerHdrHook"><span id="ctl00_LeftColumn_lblBannerHdr">Find Independent Insurance Agents</span></h1>
+<p><span id="ctl00_LeftColumn_lblBanner1">Independent insurance agents combine personal service and professional advice with Progressive</span><span id="ctl00_LeftColumn_lblBanner2">'s low insurance rates and superior claims service. And there's one near you.</span></p>
+<div id="ctl00_LeftColumn_FindAgent_pnl">
+	
+   
+    
+           <div id="faa">
+            <div id="ctl00_LeftColumn_FindAgent_FAAHelper3_faaPanel">
+		
+    <script type="text/javascript">
+        var FAAzipWaterMark = 'Zip Code';          
+    </script>
+
+    <div class="fieldContainer">
+        <select name="ctl00$LeftColumn$FindAgent$FAAHelper3$ddlFAAProduct" id="ctl00_LeftColumn_FindAgent_FAAHelper3_ddlFAAProduct" class="select" name="FAAproduct">
+			<option selected="selected" value="Auto">Auto Insurance</option>
+			<option value="Snapshot">Snapshot - Auto Insurance</option>
+			<option value="CommercialAuto">Commercial Auto Insurance</option>
+			<option value="BoatPWC">Boat/PWC Insurance</option>
+			<option value="Motorcycle">Motorcycle Insurance</option>
+			<option value="ATV">ATV Insurance</option>
+			<option value="DirtBike">Dirt Bike Insurance</option>
+			<option value="MopedScooter">Moped/Scooter Insurance</option>
+			<option value="Snowmobile">Snowmobile Insurance</option>
+			<option value="RV">RV Insurance</option>
+			<option value="GolfCart">Golf Cart Insurance</option>
+			<option value="Segway">Segway Insurance</option>
+
+		</select>
+    </div>
+    <input name="ctl00$LeftColumn$FindAgent$FAAHelper3$txtZip" type="text" value="77003" maxlength="15" id="ctl00_LeftColumn_FindAgent_FAAHelper3_txtZip" class="zipCode Zip1" name="txtZip" size="10" onfocus="if(this.value == FAAzipWaterMark){this.value=''; this.setAttribute('maxLength',5)}" onblur="if(this.value==''){this.setAttribute('maxLength',15);this.value=FAAzipWaterMark;}" />
+    <input type="image" name="ctl00$LeftColumn$FindAgent$FAAHelper3$imgbtnFAA" id="ctl00_LeftColumn_FindAgent_FAAHelper3_imgbtnFAA" class="submit" src="../images/spacer.gif" alt="Find an agent" onclick="return CheckZipCode('ctl00_LeftColumn_FindAgent_FAAHelper3_txtZip', $('#ctl00_LeftColumn_FindAgent_FAAHelper3_ddlFAAProduct').val(), 'http%3a%2f%2fwww.progressiveagent.com%2ffindanagent%2fsearch-results.aspx%3fproduct%3dAuto%26zipCode%3d77003', 'clickFAA');" border="0" />
+    
+    
+
+	</div>
+
+          </div>
+        
+   
+
+</div>
+</div>
+
+            
+                <span id="ctl00_LeftColumn_bannerHdrSpan"></span>
+                
+                
+        </div>
+        
+            <p id="ctl00_LeftColumn_bannerParagraph" class="banner">
+               <span id="ctl00_LeftColumn_lblCompany" style="display: none;">Progressive</span></p>
+            
+        
+        
+        
+        
+            </div>
+            <div id="twoColSpan">
+        <div id="advancedSearchSide">
+        
+        <div id="ctl00_LeftColumn_FAAAdvance1_AdvancedSearchPnl">
+	
+  
+    <h3>
+        <span id="ctl00_LeftColumn_FAAAdvance1_lblSearchPanelTitle">Advanced Insurance Agent Locator</span>
+    </h3>
+    <h4>
+        <span id="ctl00_LeftColumn_FAAAdvance1_FAAResultsH1" class="FAAResultsH1">Advanced Search</span></h4>
+    <span id="ctl00_LeftColumn_FAAAdvance1_lblStreetAddress" class="label lblStreetAddress">Street Address:</span>
+    <input name="ctl00$LeftColumn$FAAAdvance1$txtStreetName" type="text" id="ctl00_LeftColumn_FAAAdvance1_txtStreetName" class="textbox txtStreetName" />
+    <span id="ctl00_LeftColumn_FAAAdvance1_lblCity" class="label lblCity">City:</span>
+    <input name="ctl00$LeftColumn$FAAAdvance1$txtCity" type="text" id="ctl00_LeftColumn_FAAAdvance1_txtCity" class="textbox txtCity" />
+    <span id="ctl00_LeftColumn_FAAAdvance1_lblState" class="label lblState">State:</span>
+    <div class="fieldContainer">
+        <select name="ctl00$LeftColumn$FAAAdvance1$ddlStateList" id="ctl00_LeftColumn_FAAAdvance1_ddlStateList" class="ddlStateList">
+		<option selected="selected" value="">Select...</option>
+		<option value="AL">Alabama</option>
+		<option value="AK">Alaska</option>
+		<option value="AZ">Arizona</option>
+		<option value="AR">Arkansas</option>
+		<option value="CA">California</option>
+		<option value="CO">Colorado</option>
+		<option value="CT">Connecticut</option>
+		<option value="DE">Delaware</option>
+		<option value="DC">District of Columbia</option>
+		<option value="FL">Florida</option>
+		<option value="GA">Georgia</option>
+		<option value="HI">Hawaii</option>
+		<option value="ID">Idaho</option>
+		<option value="IL">Illinois</option>
+		<option value="IN">Indiana</option>
+		<option value="IA">Iowa</option>
+		<option value="KS">Kansas</option>
+		<option value="KY">Kentucky</option>
+		<option value="LA">Louisiana</option>
+		<option value="ME">Maine</option>
+		<option value="MD">Maryland</option>
+		<option value="MA">Massachusetts</option>
+		<option value="MI">Michigan</option>
+		<option value="MN">Minnesota</option>
+		<option value="MS">Mississippi</option>
+		<option value="MO">Missouri</option>
+		<option value="MT">Montana</option>
+		<option value="NE">Nebraska</option>
+		<option value="NV">Nevada</option>
+		<option value="NH">New Hampshire</option>
+		<option value="NJ">New Jersey</option>
+		<option value="NM">New Mexico</option>
+		<option value="NY">New York</option>
+		<option value="NC">North Carolina</option>
+		<option value="ND">North Dakota</option>
+		<option value="OH">Ohio</option>
+		<option value="OK">Oklahoma</option>
+		<option value="OR">Oregon</option>
+		<option value="PA">Pennsylvania</option>
+		<option value="RI">Rhode Island</option>
+		<option value="SC">South Carolina</option>
+		<option value="SD">South Dakota</option>
+		<option value="TN">Tennessee</option>
+		<option value="TX">Texas</option>
+		<option value="UT">Utah</option>
+		<option value="VT">Vermont</option>
+		<option value="VA">Virginia</option>
+		<option value="WA">Washington</option>
+		<option value="WV">West Virginia</option>
+		<option value="WI">Wisconsin</option>
+		<option value="WY">Wyoming</option>
+
+	</select>
+    </div>
+    <span id="ctl00_LeftColumn_FAAAdvance1_lblZipCode" class="label lblZipCode">ZIP Code:</span>
+    <input name="ctl00$LeftColumn$FAAAdvance1$txtZipCode" type="text" value="77003" maxlength="5" id="ctl00_LeftColumn_FAAAdvance1_txtZipCode" class="textbox txtZipCode" />
+    <span id="ctl00_LeftColumn_FAAAdvance1_lblDistance" class="label lblDistance">Search Within:</span>
+    <div class="fieldContainer">
+        <select name="ctl00$LeftColumn$FAAAdvance1$ddlDistance" id="ctl00_LeftColumn_FAAAdvance1_ddlDistance" class="ddlDistance">
+		<option selected="selected" value="">Select...</option>
+		<option value="5">5 miles</option>
+		<option value="10">10 miles</option>
+		<option value="15">15 miles</option>
+		<option value="25">25 miles</option>
+		<option value="50">50 miles</option>
+		<option value="75">75 miles</option>
+		<option value="100">100 miles</option>
+		<option value="150">150 miles</option>
+
+	</select>
+    </div>
+    <h4>
+        <span id="ctl00_LeftColumn_FAAAdvance1_lblAgencyName" class="lblAgencyName">Agency Name:</span></h4>
+    <input name="ctl00$LeftColumn$FAAAdvance1$txtAgencyName" type="text" id="ctl00_LeftColumn_FAAAdvance1_txtAgencyName" class="textbox txtAgencyName" />
+    <h4>
+        <span id="ctl00_LeftColumn_FAAAdvance1_lblInsuranceType" class="lblInsuranceType">Insure Your:</span></h4>
+    <div class="fieldContainer">
+        <select name="ctl00$LeftColumn$FAAAdvance1$ddlInsuranceType" id="ctl00_LeftColumn_FAAAdvance1_ddlInsuranceType" class="ddlInsuranceType">
+		<option selected="selected" value="Auto">Auto Insurance</option>
+		<option value="Snapshot">Snapshot - Auto Insurance</option>
+		<option value="CommercialAuto">Commercial Auto Insurance</option>
+		<option value="BoatPWC">Boat/PWC Insurance</option>
+		<option value="Motorcycle">Motorcycle Insurance</option>
+		<option value="ATV">ATV Insurance</option>
+		<option value="DirtBike">Dirt Bike Insurance</option>
+		<option value="MopedScooter">Moped/Scooter Insurance</option>
+		<option value="Snowmobile">Snowmobile Insurance</option>
+		<option value="RV">RV Insurance</option>
+		<option value="GolfCart">Golf Cart Insurance</option>
+		<option value="Segway">Segway Insurance</option>
+
+	</select>
+        <select name="ctl00$LeftColumn$FAAAdvance1$ddlInsuranceSubType" id="ctl00_LeftColumn_FAAAdvance1_ddlInsuranceSubType" class="ddlInsuranceSubType" style="display:none;">
+		<option value="">Select...</option>
+		<option value="BusinessAuto">Business Auto</option>
+		<option value="Truck">Truck Insurance</option>
+		<option value="TowTruck">Tow Truck</option>
+
+	</select>
+        <a href="javascript:void(0);" id="ctl00_LeftColumn_FAAAdvance1_examples" class="InsuranceSubTypeExamples" onclick="return SetViewExLink('commercial-auto-types.aspx?lang=E', 'ctl00_LeftColumn_FAAAdvance1')" style="display:none;">View Examples</a>
+        <h4>
+            <span id="ctl00_LeftColumn_FAAAdvance1_lblLanguage" class="lblLanguage">Language:</span></h4>
+        <select name="ctl00$LeftColumn$FAAAdvance1$ddlLanguage" id="ctl00_LeftColumn_FAAAdvance1_ddlLanguage" class="ddlLanguage">
+		<option selected="selected" value="">Select...</option>
+		<option value="Q">Arabic</option>
+		<option value="1">Armenian</option>
+		<option value="C">Chinese</option>
+		<option value="E">English</option>
+		<option value="6">Eritren</option>
+		<option value="4">Ethiopian</option>
+		<option value="H">French</option>
+		<option value="G">German</option>
+		<option value="A">Greek</option>
+		<option value="Z">Gujarati</option>
+		<option value="M">Hebrew</option>
+		<option value="U">Hindi</option>
+		<option value="I">Italian</option>
+		<option value="J">Japanese</option>
+		<option value="K">Korean</option>
+		<option value="3">Laos</option>
+		<option value="O">Other</option>
+		<option value="L">Persian</option>
+		<option value="N">Polish</option>
+		<option value="P">Portuguese</option>
+		<option value="R">Romanian</option>
+		<option value="B">Russian</option>
+		<option value="D">Sign Language</option>
+		<option value="5">Somalian</option>
+		<option value="S">Spanish</option>
+		<option value="W">Swedish</option>
+		<option value="F">Tagalog (Philippine)</option>
+		<option value="T">Taiwanese</option>
+		<option value="2">Thai</option>
+		<option value="X">Turkish</option>
+		<option value="Y">Urdu</option>
+		<option value="V">Vietnamese</option>
+
+	</select>
+    </div>
+    <input type="image" name="ctl00$LeftColumn$FAAAdvance1$FAAAdvanceSearchButton" id="ctl00_LeftColumn_FAAAdvance1_FAAAdvanceSearchButton" class="submit" src="/images/spacer.gif" onclick="return checkAllFAA2('ctl00_LeftColumn_FAAAdvance1_txtZipCode','ctl00_LeftColumn_FAAAdvance1_txtCity','ctl00_LeftColumn_FAAAdvance1_ddlStateList','ctl00_LeftColumn_FAAAdvance1_txtAgencyName','ctl00_LeftColumn_FAAAdvance1_ddlInsuranceType','ctl00_LeftColumn_FAAAdvance1_ddlInsuranceSubType');" border="0" />
+
+</div>
+ <script type="text/javascript" language="javascript" >
+     $(document).ready(function() {
+
+         var isSNGstate = false;
+         $("[id*='ddlInsuranceType']").change(ShowSubType);
+         $("[id*='ddlInsuranceType']").ready(ShowSubType);
+         $("[id*='ddlStateList']").ready(function() {
+             StateChange();
+         });
+         $("[id*='ddlStateList']").change(function() {
+             $("[id*='txtZipCode']").val("");
+             StateChange();
+         });
+
+         $("[id*='txtZipCode']").ready(function() { ZipUpdate(); });
+
+         $("[id*='txtZipCode']").keypress(function(event) {
+             ZipUpdate(event);
+         });
+
+
+         function ZipUpdate(event) {
+             Zip = $("[id*='txtZipCode']").val();
+             if (Zip.length == 5 && !isNaN(Zip)) {
+                 GetStateCode(Zip);
+             } else {
+                 if (!event) return;
+                 var keycode = (event.keyCode ? event.keyCode : event.which);
+                 if ((keycode < 48 || keycode > 59) && (keycode != 13)) { event.preventDefault(); }
+                 else {
+                     ZipCode = Zip + String.fromCharCode(keycode);
+                     if (ZipCode.length == 5) {
+                         GetStateCode(ZipCode);
+                     }
+                 }
+             }
+         }
+
+
+         function StateChange() {
+             isSNGstate = false;
+             var selectedState = $("[id*='ddlStateList'] option:selected");
+             if (selectedState.val().toLowerCase() == 'ca') {
+                 isSNGstate = true;
+             }
+             ShowSubType();
+         }
+
+         function getParameterByName(name) { var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search); return match && decodeURIComponent(match[1].replace(/\+/g, ' ')); }
+         function UpdateSubType() {
+             // detect eng/esp
+             if (getParameterByName("lang") != null) {
+                 optionText = (getParameterByName("lang").toLowerCase() == 's') ? 'Arena y grava' : 'Sand &amp; Gravel';
+             }
+             else {
+                 optionText = 'Sand &amp; Gravel';
+             }
+
+             
+
+             var checkIfSandGravelExists = $("[id*='ddlInsuranceSubType'] option[value='SandAndGravel']").length > 0 ? true : false;
+             // always remove sand gravel from the list.
+             if (checkIfSandGravelExists) { $("[id*='ddlInsuranceSubType'] option[value='SandAndGravel']").remove(); }
+             if (isSNGstate) {
+                 $('<option value="SandAndGravel">' + optionText + '</option>').insertAfter($("[id*='ddlInsuranceSubType'] option[value='Truck']"));
+             } // sand and gravel state check
+
+             if (getParameterByName("product") != null) {
+                 $("[id*='ddlInsuranceSubType']").find('option').each(function() {
+                     if ($(this).val() == getParameterByName("product")) {
+                         $("[id*='ddlInsuranceSubType'] option[value='" + $(this).val() + "']").attr('selected', true);
+                         isSNGstate = true;
+                     };
+                 });
+             }
+         }
+
+         function ShowSubType() {
+             var selected = $("[id*='ddlInsuranceType'] option:selected");
+             if (selected.val() == "CommercialAuto") {
+                 $("#[id*='ddlInsuranceSubType']").fadeIn("slow");
+                 $('#[id*="examples"]').fadeIn("slow");
+             } //commercical auto check
+             else {
+                 $('#[id*="ddlInsuranceSubType"]').fadeOut("slow");
+                 $('#[id*="examples"]').fadeOut("slow");
+             } //end-if CommercialAU check
+             UpdateSubType();
+         } //showsubtype
+
+         function GetStateCode(zip) {
+             $.ajax({
+                 type: "POST",
+                 contentType: "application/json; charset=utf-8",
+                 dataType: "json",                
+                 url: "/AjaxController.aspx/GetStateCode",
+                 data: "{zip:'" + zip + "'}",
+                 success: function(msg) {
+                     if (msg.d == null) return;
+                     isSNGstate = (msg.d.toLowerCase() == 'ca') ? true : false;
+                     UpdateSubType();
+                     $("[id*='ddlStateList']").val(msg.d.toUpperCase());
+                 }
+             });
+         }
+     });
+    
+    function SetViewExLink(redirUrl, cntrlPrefix) {
+         try {
+             var elemState = $("[id*='ddlStateList'] option:selected").val();
+             var elemZip = $("[id*='txtZipCode']").val();
+         } catch (e) { }
+
+         try {
+             var separator = '?';
+             if (redirUrl.indexOf(separator) >= 0)
+                 separator = '&';
+             if (elemZip !== '' && elemZip != 'undefined')
+                 redirUrl += separator + 'zipCode=' + elemZip;
+             else
+                 redirUrl += separator + "st=" + elemState;
+         } catch (e) { }
+         var height = '400';
+         var width = '534';
+         var left = (screen.availWidth - width) / 2;
+         var top = (screen.availHeight - height - 100) / 2;
+         windowprops = 'height=' + height + ',width=' + width + ',location=no,scrollbars=no,menubar=no,toolbar=no,resizable=no,left=' + left + ',top=' + top;
+         window.open(redirUrl, "Popup", windowprops);
+         return false;
+     }
+
+</script>
+
+
+        </div>
+        
+        <div class="panel panelContent">
+            
+<span id="ctl00_LeftColumn_AgentSearchResults" class="panelTitle"><div class="headerResultsWrapper">
+	<h4 class="ResultsTitle">
+		YOUR SEARCH RESULTS
+	</h4><span class="headerResults">Results 1-6 of 6 displayed below for:</span><span class="headerPrintResults">
+	</span>
+	<br /><span>  TX 77003</span><span>, Auto Insurance</span>
+</div><div class="headerMessage strong">
+	Select an independent agent below.
+</div>
+<br /><table class="containerTable" id="ContainerTable">
+	<tr class="agentRowEven">
+		<td class="agentCell">
+		<div class="agentContainer">
+			<div class="strong">
+				Kosub & Associates
+			</div>
+			<span class="agencyInfo">320 Main St Suite D, Humble, TX 77338<br />(281) 540-2202</span><br />
+			<span><a href="/agents/Texas/Humble/kosub-associates?&amp;zipcode=77003&amp;product=Auto" rel="nofollow">View Agency Details & Map</a></span><span class="slash"> / </span><span><a href="javascript:windowOpenFAAEmail('/contact/email-agent.aspx?agentcode=HAEBBmr3VvUOGIDlOJ2IU07c1sQB8d1P&amp;zipcode=77003');">E-mail this Agency</a></span>
+		</div>
+		<td class="snapshotIconCell">
+		<div class="snapshotIconContainer">
+			<img src="/images/snapshot_icon.jpg" />
+		</div>
+		</td>
+		<td class="startQuoteCell">
+		<div class="startQuoteButtonContainerBorder">
+
+		</div></td></td>
+
+	</tr>
+	<tr class="agentRowOdd">
+		<td class="agentCell">
+		<div class="agentContainer">
+			<div class="strong">
+				Pan American Agency
+			</div>
+			<span class="agencyInfo">1309 Telephone Road, Houston, TX 77023<br />(713) 926-8334</span><br />
+			<span><a href="/agents/Texas/Houston/pan-american-agency?&amp;zipcode=77003&amp;product=Auto" rel="nofollow">View Agency Details & Map</a></span><span class="slash"> / </span><span><a href="javascript:windowOpenFAAEmail('/contact/email-agent.aspx?agentcode=HAEBRmr3VvWYSP5%2bLuzUFPPGbX9JakeW&amp;zipcode=77003');">E-mail this Agency</a></span>
+		</div>
+		<td class="snapshotIconCell">
+		<div class="snapshotIconContainer">
+			<img src="/images/snapshot_icon.jpg" />
+		</div>
+		</td>
+		<td class="startQuoteCell">
+		<div class="startQuoteButtonContainerBorder">
+
+		</div></td></td>
+
+	</tr>
+	<tr class="agentRowEven">
+		<td class="agentCell">
+		<div class="agentContainer">
+			<div class="strong">
+				Doc's MLK Auto Insurance Agency
+			</div>
+			<span class="agencyInfo">4810 Mlk Jr Blvd, Houston, TX 77021<br />(713) 747-7700</span><br />
+			<span><a href="/agents/Texas/Houston/docs-mlk-auto-insurance-agency?&amp;zipcode=77003&amp;product=Auto" rel="nofollow">View Agency Details & Map</a></span><span class="slash"> / </span><span><a href="javascript:windowOpenFAAEmail('/contact/email-agent.aspx?agentcode=HAEB12r3VvWbekR%2b5vcO6gYGgSOcvYgo&amp;zipcode=77003');">E-mail this Agency</a></span>
+		</div>
+		<td class="snapshotIconCell">
+		<div class="snapshotIconContainer">
+			<img src="/images/snapshot_icon.jpg" />
+		</div>
+		</td>
+		<td class="startQuoteCell">
+		<div class="startQuoteButtonContainerBorder">
+
+		</div></td></td>
+
+	</tr>
+	<tr class="agentRowOdd">
+		<td class="agentCell">
+		<div class="agentContainer">
+			<div class="strong">
+				Insurance Corner Services
+			</div>
+			<span class="agencyInfo">723 Main St. Suite 239, Houston, TX 77002<br />(281) 448-6677</span><br />
+			<span><a href="/agents/Texas/Houston/insurance-corner-services?&amp;zipcode=77003&amp;product=Auto" rel="nofollow">View Agency Details & Map</a></span><span class="slash"> / </span><span><a href="javascript:windowOpenFAAEmail('/contact/email-agent.aspx?agentcode=HAEB12r3VvUzLvPGrW9hEAZDS1Qt8B8V&amp;zipcode=77003');">E-mail this Agency</a></span>
+		</div>
+		<td class="snapshotIconCell">
+
+		</td>
+		<td class="startQuoteCell">
+		<div class="startQuoteButtonContainerBorder">
+
+		</div></td></td>
+
+	</tr>
+	<tr class="agentRowEven">
+		<td class="agentCell">
+		<div class="agentContainer">
+			<div class="strong">
+				David L. Edwards, United Natl Ins Agcy
+			</div>
+			<span class="agencyInfo">2201 Caroline, Houston, TX 77002<br />(713) 655-0335</span><br />
+			<span><a href="/agents/Texas/Houston/david-l-edwards-united-natl-ins-agcy?&amp;zipcode=77003&amp;product=Auto" rel="nofollow">View Agency Details & Map</a></span><span class="slash"> / </span><span><a href="javascript:windowOpenFAAEmail('/contact/email-agent.aspx?agentcode=HAEB2mr3VvVsie5LPEBzdBdfIokBPdS6&amp;zipcode=77003');">E-mail this Agency</a></span>
+		</div>
+		<td class="snapshotIconCell">
+		<div class="snapshotIconContainer">
+			<img src="/images/snapshot_icon.jpg" />
+		</div>
+		</td>
+		<td class="startQuoteCell">
+		<div class="startQuoteButtonContainerBorder">
+
+		</div></td></td>
+
+	</tr>
+	<tr class="agentRowOdd">
+		<td class="agentCell">
+		<div class="agentContainer">
+			<div class="strong">
+				Amiga Ins Srvs Inc
+			</div>
+			<span class="agencyInfo">6605 Canal Street, Houston, TX 77011<br />(713) 923-7400</span><br />
+			<span><a href="/agents/Texas/Houston/amiga-ins-srvs-inc?&amp;zipcode=77003&amp;product=Auto" rel="nofollow">View Agency Details & Map</a></span><span class="slash"> / </span><span><a href="javascript:windowOpenFAAEmail('/contact/email-agent.aspx?agentcode=HAEBrGr3VvV7q5OKoRd1VPwIebgaNmQy&amp;zipcode=77003');">E-mail this Agency</a></span>
+		</div>
+		<td class="snapshotIconCell">
+
+		</td>
+		<td class="startQuoteCell">
+		<div class="startQuoteButtonContainerBorder">
+
+		</div></td></td>
+
+	</tr>
+
+</table><div class="footerResults">
+	<span class="disclaimer2">"E-mail this Agency" is intended solely for the non-commercial use of our consumers.  All other uses are prohibited.</span>
+</div></span>
+<div id="ToolTip"></div>
+           
+            </div>
+       
+
+    </div>
+      <div>
+        
+    <div id="rightColumn">
+    
+        
+                
+               <div class="retrieveQuote">
+                    <a id="ctl00_RightColumn_SearchResultsQuoteStart_PALink2" rel="nofollow" href="http://www.progressiveagent.com/quote/retrieve-quote-inside.aspx"><img src="/images/controls/interior-retrieve-quote.jpg" width="105" height="13" alt="Retrieve a Quote" /></a>
+                </div>
+               <div><div id="ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_Panel1">
+	
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $("[id*='ddlgqfaacombo']").change(SetProductList);
+            InitializeList();
+        });
+
+
+       function InitializeList() {
+
+            var zipQs = (getParameterByName('zipCode')) + (getParameterByName('zipcode'));
+            if (zipQs == null) {
+                $("[id*='ZipCode']").attr('value', 'Zip Code');
+                $("[id*='ddlgqfaacombo'] option").eq(0).attr('selected', 'selected');
+                $("[id*='ProductDDL'] option").eq(0).attr('selected', 'selected');
+            }            
+        }
+
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+
+        function SetProductList() {
+            var action = $("[id*='ddlgqfaacombo']").val();
+            if (action == "faa") {
+                $('<option value="Snapshot">' + "Snapshot - Auto Insurance" + '</option>').insertAfter($("[id*='ProductDDL'] option[value='Auto']"));
+            } else {
+            $("[id*='ProductDDL'] option[value='Snapshot']").remove();
+            }
+       }
+
+    </script>
+
+    <input type="hidden" name="ctl00$RightColumn$SearchResultsQuoteStart$QuoteStartHelper4$HdnAgtCd" id="ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_HdnAgtCd" />
+    <input type="hidden" name="ctl00$RightColumn$SearchResultsQuoteStart$QuoteStartHelper4$HdnQuoteStartPage" id="ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_HdnQuoteStartPage" value="FindAgentResultsPage" />
+    <div id="quotestart">
+        <input name="ctl00$RightColumn$SearchResultsQuoteStart$QuoteStartHelper4$ZipCode" type="text" value="77003" maxlength="5" id="ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_ZipCode" class="zipCode" size="10" onfocus="if(this.value == 'Zip Code'){this.value=''; this.setAttribute('maxLength',5)}" onblur="if(this.value==''){this.setAttribute('maxLength',8);this.value='Zip Code';}" />
+        <div class="fieldContainer">
+            <select name="ctl00$RightColumn$SearchResultsQuoteStart$QuoteStartHelper4$ProductDDL" id="ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_ProductDDL" class="productDropDown">
+		<option selected="selected" value="Auto">Auto Insurance</option>
+		<option value="CommercialAuto">Commercial Auto Insurance</option>
+		<option value="BoatPWC">Boat/PWC Insurance</option>
+		<option value="Motorcycle">Motorcycle Insurance</option>
+		<option value="ATV">ATV Insurance</option>
+		<option value="DirtBike">Dirt Bike Insurance</option>
+		<option value="MopedScooter">Moped/Scooter Insurance</option>
+		<option value="Snowmobile">Snowmobile Insurance</option>
+		<option value="RV">RV Insurance</option>
+		<option value="GolfCart">Golf Cart Insurance</option>
+		<option value="Segway">Segway Insurance</option>
+
+	</select>
+        </div>
+        
+        <input type="image" name="ctl00$RightColumn$SearchResultsQuoteStart$QuoteStartHelper4$BeginQuoteButton" id="ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_BeginQuoteButton" class="submit" src="/images/spacer.gif" onclick="return CheckQSZipCode('ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_ZipCode', $('#ctl00_RightColumn_SearchResultsQuoteStart_QuoteStartHelper4_ProductDDL').val(), 'http&amp;#58;&amp;#47;&amp;#47;www.progressiveagent.com&amp;#47;findanagent&amp;#47;search-results.aspx&amp;#63;product&amp;#61;Auto&amp;#38;zipCode&amp;#61;77003', 'clickQS','');" border="0" />
+
+</div>
+</div>
+                
+                 
+               
+                
+            
+</div>
+
+     
+        
+    </div>
+     <script> selectedTabValue = "FAAdvancedSearch"</script>
+     <div class="snapshotblurb" style="display:none; ">
+     Contact an agent to find out how you can start saving with <b>Snapshot</b>, our Pay As You Drive® program. Turn your good driving into huge savings on car insurance.
+     </div>
+
+    </div>
+    <div>
+        
+<br />
+
+        <div class="footer">
+            <div class="column1">
+                <ul class="products">
+                    <li class="footertitle">
+                        <a id="ctl00_footer_PALink1" hidefocus="true" href="http://www.progressiveagent.com/insurance-choices.aspx" style="font-weight: bold;">PROGRESSIVE INSURANCE CHOICES</a></li>
+                    <li>
+                        <ul class="subColumn1">
+                            <li>
+                                <a id="ctl00_footer_PALink2" hidefocus="true" href="http://www.progressiveagent.com/auto/auto-insurance.aspx">Auto Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink3" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/motorcycle-insurance.aspx">Motorcycle Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink4" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/atv-insurance.aspx">ATV Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink5" hidefocus="true" href="http://www.progressiveagent.com/motorcycle/snowmobile-insurance.aspx">Snowmobile Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink6" hidefocus="true" href="http://www.progressiveagent.com/watercraft/boat-insurance.aspx">Boat Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink7" hidefocus="true" href="http://www.progressiveagent.com/watercraft/pwc-insurance.aspx">PWC Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink8" hidefocus="true" href="http://www.progressiveagent.com/rv/rv-insurance.aspx">RV Insurance</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="subColumn2">
+                            <li>
+                                <a id="ctl00_footer_PALink9" hidefocus="true" href="http://www.progressiveagent.com/segway/segway-insurance.aspx">Segway Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink10" hidefocus="true" href="http://www.progressiveagent.com/commercialauto/commercial-auto-insurance.aspx">Commercial Auto Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink11" hidefocus="true" href="http://www.progressiveagent.com/homeowners/home-insurance.aspx">Home Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink12" hidefocus="true" href="http://www.progressiveagent.com/umbrella/umbrella-insurance.aspx">Personal Umbrella Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink13" hidefocus="true" href="http://www.progressiveagent.com/epli/employment-practices-liability-insurance.aspx">Employment Practices Liability Insurance</a></li>
+                            <li>
+                                <a id="ctl00_footer_PALink14" hidefocus="true" href="http://www.progressiveagent.com/pet-injury-coverage.aspx">Pet Injury Coverage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="column2">
+                <ul class="about">
+                    <li class="footertitle">
+                        <a id="ctl00_footer_PALink15" hidefocus="true" href="http://www.progressiveagent.com/findanagent/about-agents.aspx" style="font-weight: bold;">ABOUT PROGRESSIVE AGENTS</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink16" hidefocus="true" href="http://www.progressiveagent.com/findanagent/advanced-search.aspx">Find an Agent</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink17" hidefocus="true" href="http://www.progressiveagent.com/findanagent/agent-value.aspx">Agent Value</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink18" hidefocus="true" href="http://www.progressiveagent.com/findanagent/about-agents.aspx">About Independent Agents</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink19" hidefocus="true" href="http://www.progressiveagent.com/findanagent/top-choice.aspx">Why Independent Agents Choose Progressive</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink20" hidefocus="true" href="http://www.progressiveagent.com/about/our-story.aspx">Our Story</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink21" hidefocus="true" href="http://www.progressiveagent.com/about/about.aspx">The Progressive Advantage</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink22" hidefocus="true" href="https://www.foragentsonly.com/aqn/default.aspx">Become an Agent</a></li>
+                </ul>
+            </div>
+            <div class="column3">
+                <ul class="claims">
+                    <li class="footertitle" >
+                        <a id="ctl00_footer_PALink23" hidefocus="true" href="http://www.progressiveagent.com/claims/claims.aspx" style="font-weight: bold;">PROGRESSIVE CLAIMS SERVICE</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink24" hidefocus="true" href="http://www.progressiveagent.com/claims/claims-process.aspx">Claims Process</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink25" hidefocus="true" href="http://www.progressiveagent.com/claims/concierge-claims.aspx">Concierge Experience</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink26" hidefocus="true" href="http://www.progressiveagent.com/claims/catastrophe-claims.aspx">Catastrophe Claims</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink27" hidefocus="true" href="http://www.progressiveagent.com/claims/windshield-claims.aspx">Windshield &amp; Glass Claims</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink28" hidefocus="true" href="http://www.progressiveagent.com/claims/repair-estimates.aspx">Repair Estimates</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink29" hidefocus="true" href="http://www.progressiveagent.com/claims/roadside-assistance.aspx">Roadside Assistance</a></li>
+                    <li>
+                        <a id="ctl00_footer_FooterReportTrackClaim" hidefocus="true" href="http://www.progressiveagent.com/claims/claims.aspx">Report or Track a Claim</a></li>
+                </ul>
+            </div>
+            <div class="column4">
+                <ul class="ols">
+                    <li class="footertitle">
+                        <a id="ctl00_footer_PALink31" hidefocus="true" href="http://www.progressiveagent.com/manage-your-policy.aspx" style="font-weight: bold;">MANAGE YOUR POLICY</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink32" class="Prg_TrackAs-Login-EZ_Hub-394" hidefocus="true" href="https://onlineservice3.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE">Log In</a></li>
+                    <li>
+                        <a id="ctl00_footer_PALink51" hidefocus="true" href="https://onlineservice3.progressive.com/selfservice.web/SelfService.aspx?Page=Login.ProvideIdentity&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;TitleID=Register">Register</a></li>
+                    <li>
+                        <a id="ctl00_footer_FooterExpressPay" hidefocus="true" href="https://onlineservice3.progressive.com/selfservice.web/SelfService.aspx?Page=Non-LoggedIn.VerifyPolicy.ProvidePolicyInformation&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE&amp;EZDestination=EZPAY">Make a Payment</a></li>
+                    <li id="rss">
+                        <a id="ctl00_footer_PALink33" hidefocus="true" href="http://www.progressiveagent.com/articles/summary.aspx"><strong>RSS</strong> - Sign up to receive our new articles, instantly!</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="clear: both">
+        </div>
+        <div class="footerHorizontalNav">
+            <ul class="footerNav">
+                <li>
+                    <a id="ctl00_footer_PALink35" hidefocus="true" href="http://www.progressiveagent.com/">Home</a></li>
+                <li class="seperator">/</li>
+                <li>
+                    <a id="ctl00_footer_PALink36" hidefocus="true" href="http://www.progressiveagent.com/contact/about.aspx">About Us</a></li>
+                <li class="seperator">/</li>
+                <li>
+                    <a id="ctl00_footer_PALink37" hidefocus="true" href="http://www.progressiveagent.com/contact/contact.aspx?t=1">Contact</a></li>
+                <li class="seperator">/</li>
+                <li>
+                    <a id="ctl00_footer_PALink38" hidefocus="true" href="http://www.progressiveagent.com/espanol-home.aspx">Espa&ntilde;ol</a></li>
+                <li class="seperator">/</li>               
+                <li>
+                    <a id="ctl00_footer_PALink40" hidefocus="true" href="http://www.progressiveagent.com/site-map.aspx">Site Map</a></li>
+                <li class="seperator">/</li>
+                <li>
+                    <a id="ctl00_footer_PALink41" hidefocus="true" href="http://www.progressiveagent.com/help.aspx">Help</a></li>
+                <li class="seperator">/</li>
+                <li>
+                    <a id="ctl00_footer_TermsOfUse" hidefocus="true" href="http://www.progressiveagent.com/terms-use.aspx">Terms of Use</a></li>
+                <li class="seperator">/</li>
+                <li>
+                    <a id="ctl00_footer_PALink43" hidefocus="true" href="http://www.progressiveagent.com/privacy/privacy-policy.aspx">Privacy &amp; Security</a></li>
+            </ul>
+            <div class="verisign">            
+                <table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+              <tr>
+              <td><a href="http://preferences.truste.com/preference.html" target="new" onclick="window.open('http://preferences.truste.com/preference.html','new','width=720px,height=410px,scrollbars=yes')"><img src="http://choices.truste.com/get?name=admarker2.png" width="77" height="16" alt="" title="" border="0"  /></a></td>
+<td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.progressiveagent.com&amp;size=S&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a></td>
+              </tr>
+              </table>
+       
+            </div>
+            <div id="copyright" title="01">
+                <p>
+                    Copyright 1995-2015. Progressive Casualty Insurance
+                    Company. All rights reserved.</p>
+            </div>
+            <div id="disclaimer">
+            
+                    <p>
+                        We offer insurance by phone, online and through
+                        <a id="ctl00_footer_PALink44" hidefocus="true" href="http://www.progressiveagent.com/findanagent/advanced-search.aspx">independent agents/brokers</a>,
+                        and prices vary based on how you buy.  You won't know which car insurance price is the lowest for you until 
+                        you get separate quotes from both an agent or broker, and from us directly. Progressive quotes available through 
+                        ProgressiveAgent.com are only for policies purchased through agents/brokers.</p>
+                
+            </div>
+        </div>
+    
+    </div>
+    </form>
+</body>
+</html>
